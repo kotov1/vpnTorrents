@@ -40,8 +40,10 @@ gulp.task('js', ['common-js'], function() {
 
 gulp.task('browser-sync', function() {
 	browserSync({
-		proxy: "vpn/index.php",
-		notify: false
+		server: {
+			baseDir: 'app'
+		},
+		notify: false,
 	});
 });
 
